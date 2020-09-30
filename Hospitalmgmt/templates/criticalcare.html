@@ -1,0 +1,28 @@
+{%extends 'main.html'%} {%block containt%} {%include 'navigation.html'%}
+<br>
+
+<head>
+    <style>
+        body {
+            background-image: url(/static/appoint.jpg);
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<div class="mx-auto" style="width: 200px;">
+
+    <div class="card bg-dark text-light" style="width: 30rem;">
+        <div class="card-body">
+            <h5 class="card-title bg-dark">Critical Care Form</h5>
+            <form method="POST">
+                {%load crispy_forms_tags%} {%csrf_token%} {{form|crispy}}
+                <button type="submit" class="btn btn-primary">Submit form</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{%include 'footer.html'%} {%endblock%}

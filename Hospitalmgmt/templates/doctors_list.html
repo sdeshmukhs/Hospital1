@@ -1,0 +1,39 @@
+{%extends 'main.html'%} {%block containt%} {%include 'nav2.html'%}
+
+
+<h1>Doctors List</h1>
+<br>
+<br>
+
+<table class="table table-borderless table-dark">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>e-mail</th>
+            <th>Specialization</th>
+            <th>Degree</th>
+            <th>Delete</th>
+            <th>Doc</th>
+        </tr>
+        {%for i in read%}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.specialization}}</td>
+            <td>{{i.degree}}</td>
+            <!-- <td>
+                <a href="{{i.document.url}}">{{i.document}}</a>
+            </td>
+            <td>
+                <a href="{%url 'update' i.id%}">Update</a>
+            </td>
+            <td>
+                <a href="{%url 'delete' i.id%}">Delete</a>
+            </td> -->
+        </tr>
+        {%endfor%}
+</table>
+
+
+
+{%include 'footer.html'%} {%endblock%}

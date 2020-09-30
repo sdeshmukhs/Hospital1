@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Admin Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{%url 'home1'%}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{%url 'read'%}">Doctors List</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{%url 'read_recruitmentcall'%}">Doctor's recruitment list</a>
+            </li>
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle bg-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Action
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{%url 'read_ambulance'%}">Ambulance requests</a>
+                    <a class="dropdown-item" href="{%url 'read_appointment'%}">Appointment requests</a>
+                    <a class="dropdown-item" href="{%url 'read_healthcheckup' %}">Health Checkup requests</a>
+                    <a class="dropdown-item" href="{%url 'read_criticalcare' %}">Critical Care</a>
+                    <a class="dropdown-item" href="{%url 'See_Ambulance_Request' %}">Ambulance Requests</a>
+                    <a class="dropdown-item" href="{%url 'location' %}">Add Location</a>
+                </div>
+            </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="{%url 'logout' %}">Logout</a>
+            </li>
+
+            <!-- Example single danger button -->
+
+        </ul>
+    </div>
+</nav>

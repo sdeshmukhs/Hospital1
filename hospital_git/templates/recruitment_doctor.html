@@ -1,0 +1,22 @@
+{%extends 'main.html'%} {%block containt%} {%include 'navigation.html'%}<br><br>
+
+
+<div class="mx-auto" style="width: 200px;">
+
+
+    <div class="card" style="width: 20rem; background-color:skyblue">
+        <div class="card-body">
+            <h5 class="card-title">Form</h5>
+
+
+            <form method="POST">
+                {%load crispy_forms_tags%} {%csrf_token%} {{form|crispy}}<br>
+                <button type="submit " class="btn btn-primary">Register</button>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+{%endblock%}

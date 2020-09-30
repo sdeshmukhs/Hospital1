@@ -1,0 +1,35 @@
+{%extends 'main.html'%} {%block containt%} {%include 'nav2.html'%}
+<br>
+<br>
+
+<table class="table table-borderless table-dark">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>Address</th>
+            <th>Specialization</th>
+            <th>Degree</th>
+            <th>Passout Year</th>
+            <th>Experience</th>
+
+        </tr>
+        {%for i in read%}
+        <tr>
+            <td>i.Name</td>
+            <td>i.Email</td>
+            <td>i.Contact_Number</td>
+            <td>i.Address</td>
+            <td>i.Specialization</td>
+            <td>i.Degree</td>
+            <td>i.Passout_Year</td>
+            <td>i.Experience</td>
+
+        </tr>
+        {%endfor%}
+</table>
+
+
+
+{%include 'footer.html'%} {%endblock%}

@@ -1,0 +1,31 @@
+{%extends 'main.html'%} {%block containt%} {%include 'nav2.html'%}
+<br>
+<br> indeed shine
+
+
+<table class="table table-borderless table-dark">
+    <thead>
+        <tr>
+            <th>Patient Name</th>
+            <th>Patient Age</th>
+            <th>Reason of concern</th>
+            <th>Patient Contact</th>
+            <th>patient Address</th>
+            <th>Date</th>
+
+        </tr>
+        {%for i in read%}
+        <tr>
+            <td>{{i.Patient_Name}}</td>
+            <td>{{i.Patient_Age}}</td>
+            <td>{{i.Reason_of_concern}}</td>
+            <td>{{i.Patient_Contact}}</td>
+            <td>{{i.Patient_Address}}</td>
+            <td>{{i.DATE}}</td>
+        </tr>
+        {%endfor%}
+</table>
+
+
+
+{%include 'footer.html'%} {%endblock%}

@@ -1,0 +1,31 @@
+{%extends 'main.html'%} {%block containt%} {%include 'nav2.html'%}
+<br>
+<br>
+
+<table class="table table-borderless table-dark">
+    <thead>
+        <tr>
+            <th>Patient_Name</th>
+            <th>Patient_Contact</th>
+            
+            <th>location</th>
+            
+            <th>Patient_Address</th>
+            <th>DATE</th>
+            
+        </tr>
+        {%for i in see_ambulance%}
+        <tr>
+            <td>{{i.Patient_Name}}</td>
+            <td>{{i.Patient_Contact}}</td>
+            <td>{{i.location}}</td>
+            <td>{{i.Patient_Address}}</td>
+            <td>{{i.DATE}}</td>
+            
+        </tr>
+        {%endfor%}
+</table>
+
+
+
+{%include 'footer.html'%} {%endblock%}
